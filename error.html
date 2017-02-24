@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<!--Name: Yojana Patil jadrn040
+	CS 645
+	Project #1
+	error.html
+-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Shopify Login</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/jquery/jquery.js"></script>
+    <script src="http://jadran.sdsu.edu/~jadrn040/proj1/login.js"></script>
+</head>
+<body background="http://jadran.sdsu.edu/~jadrn040/proj1/images/back.jpg">
+
+<div class="outer" id="outer">
+<div class="logo">
+      <img src="http://jadran.sdsu.edu/~jadrn040/proj1/images/logo1.png"/>
+</div>
+<div class="login" id="login">
+    <div id="main">
+    <form method="POST" action="/perl/jadrn040/login.cgi">
+    	<table>
+		<tr>
+			<td><b>Username:</b></td>
+			<td><input type="text" name="user" id="user" size="15"></td>
+		</tr>
+		<tr>
+			<td><b>Password:</b></td>
+			<td><input type="password" name="password" id="password" size="15"></td>
+		</tr>
+		<tr>
+			<td><input type="reset" class="button"></td>
+			<td><input type="submit" id="submiterror" value="Login" class="button"></td>
+		</tr>
+	</table>
+    </form>
+	<div id="error_msg" class="error">ERROR, wrong username or password</div>
+    </div>	 
+</div>
+</div>	
+</body>
+</html>

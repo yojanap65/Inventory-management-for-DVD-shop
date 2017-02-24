@@ -1,0 +1,271 @@
+/* Name: Yojana Patil jadrn040
+# CS 645
+# Project #1
+# tabs.css */
+
+
+*{
+    margin: 0;   
+}
+
+h2 { text-align: center;
+font-family: Verdana;
+color: BLACK;
+ }
+
+div#tabs-1 {
+    height: 100%;
+	
+    background: #E0EEEE	;
+    border: 1px solid #009;
+    padding: 5px;
+	margin-left: 200px;
+	margin-right: 200px;
+	margin-bottom: 50px;
+	border-radius: 25px;
+	border-color: #104E8B;
+}
+div#tabs-2 {
+    height: 100%;
+    background:#F0F8FF;
+    border: 1px solid #009;    
+    padding: 5px;
+	margin-left: 200px;
+	margin-right: 200px;
+	margin-bottom: 50px;
+	border-radius: 25px;
+	 border-color: #104E8B;
+}
+div#tabs-3 {
+    height: 100%;
+    background: #F8F8FF;
+    border: 1px solid #009;    
+    padding: 5px;
+	margin-left: 200px;
+	margin-right: 200px;
+	margin-bottom: 50px;
+	border-radius: 25px;
+	border-color: #104E8B;
+}
+div#tab1 {
+	margin-top: 2vw;
+	margin-left: 10vw;
+	margin-right: 100px;
+	margin-bottom: 50px;
+	font-weight:bold;
+	font-family: Verdana;
+	position: relative;
+}
+div#tab2 {
+	margin-top: 2vw;
+	margin-left: 10vw;
+	margin-right: 50px;
+	margin-bottom: 50px;
+	font-weight:bold;
+	font-family: Verdana;
+}
+div#tab3 {
+	margin-top: 2vw;
+	margin-left: 10vw;
+	margin-right: 50px;
+	margin-bottom: 50px;
+	font-weight:bold;
+	font-family: Verdana;
+}
+table {
+    border-collapse: collapse;
+	position:relative;
+	
+	
+}
+
+td {
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+div#tabs {
+    margin: 0 40px 0 40px;
+    height: 500px;
+    min-width:500px;
+	font-weight : bold;
+	font-family: Verdana;
+    }
+    
+
+#part2{
+	float: right;
+	margin-right: 50px;
+	margin-left: 20px;
+}
+#description{
+	width: 350px;	
+}
+#features{
+	width: 350px;	
+}
+#description2{
+	width: 350px;	
+}
+#features2{
+	width: 350px;	
+}
+#description3{
+	width: 350px;	
+}
+#features3{
+	width: 350px;	
+}
+div#buttons{
+	margin-left: 10vw;
+}
+
+div#logout {
+	float: right;
+	font-weight:bold;
+   margin-right: 250px;
+   font-family: Verdana;
+}
+div#logospace {
+    float: left;
+    position: absolute;
+    top: 0;
+    left: 0;
+	margin-left: 200px;
+	margin-top: 5px;
+}
+
+div.tab {
+    overflow: hidden;
+	margin-top: 30px;
+	margin-left: 550px;
+	margin-right: 60px;	
+	margin-bottom: 20px;
+	display: block;
+}
+#logo {
+	 height: 100px;
+    width: 125px;	 
+}
+#upload1 {
+	margin-right: 80px;
+	height : 150px;
+	width:220px;
+	margin-left: 200px;
+	border: 1px solid #000000;
+}
+#upload2 {
+	margin-right: 80px;
+	height : 150px;
+	width:220px;
+	margin-left: 200px;
+	border: 1px solid #000000;
+}
+
+
+div#error_message1{
+	font-family: Verdana;
+    font-size: 17px;
+	color:red;
+	margin-left: 200px;
+}
+div#error_message2{
+	font-family: Verdana;
+    font-size: 17px;
+	color:red;
+	margin-left: 200px;
+}
+div#error_message3{
+	font-family: Verdana;
+    font-size: 17px;
+	color:red;
+	margin-left: 200px;
+}
+ 
+div.tab a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+	font-weight:bold;
+	font-family: Verdana;
+    font-size: 17px;
+	border: 1px solid #000000;
+	border-radius: 25px;
+	border-color: #104E8B;
+	background-color:#D8D8D8  ;
+}
+
+div.tab a:hover {
+	 background-color: white; 
+}
+
+.button {
+    background-color:#ADD8E6 ; 
+    border: none;
+    color: black;
+	margin-top: 20px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+	font-family: Verdana;
+	font-weight:bold;
+	cursor:pointer;
+	border-radius: 25px;
+	
+}
+.height1 {
+	height: 35px;
+	width: 150px;
+}
+.vendor {
+	height: 35px;
+	width: 150px;
+}
+.category {
+	height: 35px;
+	width: 150px;
+}
+.vendor2 {
+	height: 35px;
+	width: 150px;
+}
+.category2 {
+	height: 35px;
+	width: 150px;
+}
+.vendor3 {
+	height: 35px;
+	width: 150px;
+}
+.category3 {
+	height: 35px;
+	width: 150px;
+}
+#image {
+	width: 300px;
+}
+#image2 {
+	width: 300px;
+}
+#image3{
+	width:300px;
+}
+.hidecls {
+	display: none;
+}
+tr .hidecls{
+	display: none;
+}
+b .hidecls{
+	display: none;
+}
+#logo2{
+	margin-top: 2vw;
+	position: absolute;
+	margin-left: 30vw;
+}

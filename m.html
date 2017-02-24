@@ -1,0 +1,277 @@
+<table>
+   <tr>
+      <td>SKU:<font color="red">*</font></td>
+      <td><input type="text" Placeholder='CAT-123' id="sku" name="sku" size="7"/></td>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Description:<font color="red">*</font></td>
+      <td><textarea id="description" name="description" rows="7" cols="25"></textarea></td>
+   </tr>
+   <tr>
+      <td>&nbsp;Vendor:<font color="red">*</font></td>
+      <td>
+         <select id="vendor" name="vendor">
+            <option selected disabled value="0">---Select---</option>
+            for(my $i=0; $i < @arr; $i++)
+            {
+            <option value = $arr[$i][0]>$arr[$i][1]</option>
+            ";}
+         </select>
+      </td>
+   </tr>
+   <tr>
+      <td> Manufacturer ID:<font color="red">*</font></td>
+      <td><input type="text" id="MId" name="MId" size="10"/></td>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Features:<font color="red">*</font></td>
+      <td><textarea id="features" name="features" rows="7" cols="25"></textarea></td>
+   </tr>
+   <tr>
+      <td>&nbsp;Category:<font color="red">*</font></td>
+      <td>
+         <select id = "category" name="category">
+            <option selected disabled value="0">---Select---</option>
+            my $query = "select id, name from category ";
+            @arr = db_query_array($query);    
+            for(my $i=0; $i < @arr; $i++) 
+            {print "
+            <option value = $arr[$i][0]>$arr[$i][1]</option>
+            ";}
+         </select>
+      </td>
+      <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cost:<font color="red">*</font></td>
+      <td>$<input type="text" id="cost" name="cost" size="10"/></td>
+      <td>Retail:<font color="red">*</font></td>
+      <td>$<input type="text" id="retail" name="retail" size="10"/></td>
+   </tr>
+</table>
+
+
+<table>
+   <tr>
+      <td>
+         <table>
+            <tr>
+               <td>DVD Image:<font color="red">*</font></td>
+               <td>&nbsp;&nbsp;<input type="file" id="image" name="image"/></td>
+            </tr>
+            <tr>
+               <td><input type="reset" id="reset1" name="resetbtn" class="button" value="Clear"/></td>
+               <td><input type="submit" id="add_btn" name="addbtn" class="button" value="Add"/></td>
+            </tr>
+         </table>
+      </td>
+      <td>
+         <div id="upload_img1"></div>
+      </td>
+   </tr>
+</table>
+
+<!-- ****************************************** -->
+
+         <div id="tabs-2">
+   <h2>Edit Existing Record</h2>
+   <p>
+      Edit Record goes here.
+   </p>
+   <table>
+      <tr>
+         <td>Enter SKU:<font color= "red">*</font></td>
+         <td><input type= "text" Placeholder= "CAT-123" id= "sku2" name= "sku" size= "7"/></td>
+         <td>Description:<font color= "red ">*</font></td>
+         <td><textarea readonly= "readonly " id= "description2 " name= "description " rows= "7" cols= "25"></textarea></td>
+      </tr>
+      <tr>
+         <td>&nbsp;Vendor:<font color= "red ">*</font></td>
+         <td>
+            <select disabled id= "vendor2 " name= "vendor ">
+               my $query2 = "select id, name from vendor ";
+               @arr2 = db_query_array($query2);
+               <option selected disabled>---Select---</option>
+               for(my $i=0; $i < @arr2; $i++)
+               { 
+               <option value = $arr2[$i][0]>$arr2[$i][1]</option>
+               ";}
+            </select>
+         </td>
+      </tr>
+      <tr>
+         <td>Manufacturer ID:<font color="red">*</font></td>
+         <td><input type= "text " id= "MId2 " name= "MId " readonly= "readonly " size= "10"/></td>
+         <td>&nbsp;Features:<font color= "red ">*</font></td>
+         <td><textarea  readonly= "readonly" id= "features2 " name= "features"  rows= "7" cols= "25" ></textarea></td>
+      </tr>
+      <tr>
+         <td>&nbsp;Category:<font color= "red">*</font></td>
+         <td>
+            <select disabled id = "category2 " name= "category ">
+               <option selected disabled>---Select---</option>
+               my $query2c = "select id, name from category ";
+               @arr2c = db_query_array($query2c);
+               for(my $i=0; $i < @arr2c; $i++)
+               { 
+               <option value = $arr2c[$i][0]>$arr2c[$i][1]</option>
+               ";}
+            </select>
+         </td>
+         <td>Cost:<font color= "red">*</font></td>
+         <td>$<input type= "text" id= "cost2 " name= "cost" readonly= "readonly" size= "10 "/></td>
+         <td>&nbsp;Retail:<font color= "red">*</font></td>
+         <td>$<input type= "text" id="retail2" name= "retail" readonly= "readonly " size= "10"/></td>
+      </tr>
+   </table>
+   <table>
+      <tr>
+         <td>
+            <table>
+               <tr>
+                  <td>DVD Image:</td>
+                  <td>&nbsp;&nbsp;<input type= "file" id= "image2 " name= "image "/> 
+                     <input type="hidden" size= "1px " id= "hide_image2 " name= "image "/>
+                  </td>
+               </tr>
+               <tr>
+                  <td><input type= "reset" id= "reset2" name= "resetbtn" class= "button" value= "Clear "/></td>
+                  <td><input type= "submit" id= "editbtn" name= "editbtn" class= "button" value= "Edit"/></td>
+               </tr>
+            </table>
+         </td>
+         <td>
+            <div id= "upload_img2"></div>
+         </td>
+      </tr>
+   </table>
+</div>
+
+
+
+<!-- ****************************************** -->
+
+<div id="tabs-3">
+   <h2>Delete Record</h2>
+   <p>
+      Delete Record goes here.
+   </p>
+   <table>
+      <tr>
+         <td>Enter SKU:<font color="red">*</font></td>
+         <td><input type="text" Placeholder="CAT-123" id="sku3" name="sku" size="7"/></td>
+         <td>Description:</td>
+         <td><textarea readonly="readonly" id="description3" name="description" rows="8" cols="34"></textarea></td>
+      </tr>
+      <tr>
+         <td>&nbsp;Vendor:</td>
+         <td>
+            <select disabled id="vendor3" name="vendor">
+               <option selected disabled></option>
+               my $query3 = "select id, name from vendor ";
+               @arr3 = db_query_array($query3);
+               for(my $i=0; $i < @arr3; $i++)
+               {
+               <option value = $arr3[$i][0]>$arr3[$i][1]</option>
+               ";}
+            </select>
+         </td>
+      </tr>
+      <tr>
+         <td>Manufacturer ID:</td>
+         <td><input type="text" readonly="readonly" id="MId3" name="MId" size="10"/></td>
+         <td>&nbsp;Features:</td>
+         <td><textarea  readonly="readonly" id="features3" name="features" rows="8" cols="34" ></textarea></td>
+      </tr>
+      <tr>
+         <td>&nbsp;Category:</td>
+         <td>
+            <select disabled id = "category3" name="category">
+               <option selected disabled></option>
+               my $query3c = "select id, name from category ";
+               @arr3c = db_query_array($query3c);
+               for(my $i=0; $i < @arr3c; $i++)
+               {
+               <option value = $arr3c[$i][0]>$arr3c[$i][1]</option>
+               ";}
+            </select>
+         </td>
+         <td>Cost:</td>
+         <td>$<input type="text" readonly="readonly" id="cost3" name="cost" size="10"/></td>
+         <td>Retail:</td>
+         <td>$<input type="text" readonly="readonly" id="retail3" name="retail" size="10"/></td>
+      </tr>
+   </table>
+   <table>
+      <tr>
+         <td>
+            <table>
+               <tr>
+                  <td>DVD Image:</td>
+                  <td>&nbsp;&nbsp;<input type="text" readonly="readonly" id="image3" name="image" size="10"/></td>
+               </tr>
+               <tr>
+                  <td><input type="reset" id="resetbtn3" name="resetbtn" class="button" value="Clear"/></td>
+                  <td><input type="submit" id="deletebtn" name="deletebtn"  class="button"  value="Delete"/></td>
+               </tr>
+            </table>
+         </td>
+         <td>
+            <div id="upload_img3"></div>
+         </td>
+      </tr>
+   </table>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

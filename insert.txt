@@ -1,0 +1,71 @@
+﻿use jadrn040;
+
+create table vendor(
+vendorId int AUTO_INCREMENT,
+vendorName varchar(25) NOT NULL,
+primary key(vendorId));
+ 
+insert into vendor values(NULL,'Kris Kristofferson');
+insert into vendor values(NULL,'Simon Kirke');
+insert into vendor values(NULL,'David Bowie');
+insert into vendor values(NULL,'Big Sean');
+insert into vendor values(NULL,'Valerie June');
+insert into vendor values(NULL,'The Sadies');
+insert into vendor values(NULL,'Elbow');
+
+insert into vendor values(NULL,'Ramin Djawadi');
+insert into vendor values(NULL,'Overkill');
+insert into vendor values(NULL,'Raffi');
+insert into vendor values(NULL,'Lupe Fiasco');
+insert into vendor values(NULL,'Dave Hause');
+insert into vendor values(NULL,'Brett Young');
+insert into vendor values(NULL,'Hanni El');
+insert into vendor values(NULL,'Deep Purple');
+
+
+
+
+create table category(
+categoryId int AUTO_INCREMENT,
+categoryName varchar(25) NOT NULL,
+primary key(categoryId));
+
+insert into category values(NULL,'TV Series');
+insert into category values(NULL,'Bestsellers');
+insert into category values(NULL,'New Releases');
+insert into category values(NULL,'Blue Ray');
+
+
+create table product(
+sku char(7) NOT NULL,
+catId int,
+venId int,
+vendorModel varchar(50),
+description varchar(1024),
+features varchar(1024),
+cost decimal(10,2),
+retail decimal(10,2),
+image varchar(1024),
+primary key(sku),
+foreign key(catId) references category(categoryId),
+foreign key(venId) references vendor(vendorId));
+ 
+insert into product values('DTV-001','1','1','T1','Adventures of Sherlock Holmes', 'The legacy of the investigative mastermind Sherlock Holmes has transcended through three centuries and appeared in books, television series, films and so much more.','4.95','9.98','tv-001.jpg');
+ 
+insert into product values('DTV-002','1','2','T2','Sybil','Sybil (1976) follows the odd life of Sybil (Sally Field), a substitute teacher with a serious case of multiple personality disorder. Developing the personalities as a coping mechanism against abuse from her mother, Sybil shares her life with several other facets of herself: aggressive Peggy Lou, suicidal Mary, baby Sybil and many, many more.','21.5','24.98','tv-002.jpg');
+ 
+insert into product values('DTV-003','1','3','T3','The Twilight Zone','You are traveling through another dimension, a dimension not only of sight and sound but of mind, a journey into a wondrous land whose boundaries are that of imagination.','64.29','79.99','tv-003.jpg');
+
+insert into product values('DTV-004','1','4','T4','Adventures of Superman','Powerful. Wonderful. Colorful. The In-Color Adventures!Bullets bounce off him. Criminal masterminds can not outfox him. Even the destructive gizmos dreamed up by mad scientists can not blast him into atoms. Superman has the strength and courage to defeat all foes.','22.67','29.98','tv-004.jpg');
+
+insert into product values('DTV-005','1','5','T5','Fawlty Towers: The Complete Collection','Coming to Special Edition DVD for the first time, its the complete Fawlty Towers collection with all-new commentary from John Cleese! Hot off the runaway success of Monty Pythons Flying Circus, John Cleese embarked on his now-legendary sitcom','42.35','49.98','tv-005.jpg');
+
+
+insert into product values('BST-001','2','6','B1','The Song of Bernadette','Absorbing, emotional and dramatic -VarietyJennifer Jones won the Academy Award for her screen debut in this heartening film about a young girl whose wondrous visions inspired a nation.','5.25','9.98','bst-001.jpg');
+
+
+
+insert into product values('BST-002','2','3','B3','Arsenic and Old Lace','Cary Grant and a stellar cast romp through this classic farce on DVD Arsenic and Old Lace based on Joseph Kesselring 1941 Broadway hit and breezily directed by Frank Capra','9.71','12.98','bst-002.jpg');
+
+insert into product values('BST-002','2','3','B3','Arsenic and Old Lace','Cary Grant and a stellar cast romp through this classic farce on DVD Arsenic and Old Lace based on Joseph Kesselring 1941 Broadway hit and breezily directed by Frank Capra','9.71','12.98','bst-002.jpg');
+insert into product values('NRS-001','3','5','N1','Breakfast At Tiffanys','Blake Edwardss adaptation of Truman Capotes classic novella is ideally cast with Audrey Hepburn in the role of Holly Golightly.','7.25','12.98','n1.jpg');
